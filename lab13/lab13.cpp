@@ -13,7 +13,10 @@ int main()
     double birth_rate = 8;
     double death_rate = 12;
     double migration_rate = 33;
-    double current_year = 2017;
+    double current_year;
+    
+    cout<<"What year is it?"<<endl;
+    cin>>current_year;
     
     //Population growth rate per minute equation
     birth_rate = 60/birth_rate;
@@ -26,7 +29,10 @@ int main()
     double population_per_year = ((population_growth_rate * 60) * 24) * 365;
 
     //Determining future population
-    int years_passed = 99;
+    int years_passed;
+    cout<<"How many years in the future would you like to check?"<<endl;
+    cin>>years_passed;
+    
     int future_population = round((years_passed * population_per_year) + current_population);
     
     //declaring future population
